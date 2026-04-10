@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Club</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./images/ictclub.jpg" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="shortcut icon"
+        href="https://scontent.fdac198-1.fna.fbcdn.net/v/t39.30808-1/438222663_400583079485916_5109593548579227615_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFDmbmgCp6u8VbleAV26IEvIBddHiw3oosgF10eLDeiiwmgvzAN30wS0dSJ22mdzceVUKXY87HskHYSWdetnmjS&_nc_ohc=mEGwAVlfmNAQ7kNvwGXrQgP&_nc_oc=AdmVQ1dFKhFsQqiHOFMU-bkSDXtpRFZPnGNY1ZSBFg1f8qwg3yCJFtypRrXVwyLLrvU&_nc_zt=24&_nc_ht=scontent.fdac198-1.fna&_nc_gid=S1nqLuz0V9tNb5HE3oTkCw&oh=00_AfezSCYV6lFRMUutGopir9MhoMVMTbcKRXaJkZmX0TtwFg&oe=68F97799"
+        type="image/x-icon">
+</head>
+
+
+<body id="main-body" class="bg-white transition-colors duration-500">
+    <header>
+        <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-5 lg:px-8">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1">
+                    <img class="w-12 rounded-full" src="./images/ictclub.jpg" alt="Logo" />
+                </a>
+            </div>
+
+            <div class="flex lg:hidden">
+                <button id="mobile-btn" type="button" command="show-modal" commandfor="mobile-menu"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400 transition-colors duration-300">
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-8">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden lg:flex lg:gap-x-12 items-center">
+                <a href="index.html" class="nav-link text-md font-semibold text-black">Home</a>
+                <a href="index.html#member" class="nav-link text-md font-semibold text-black">Members</a>
+                <a href="index.html#activities" class="nav-link text-md font-semibold text-black">Activities</a>
+                <a href="events.html" class="nav-link text-md font-semibold text-black">Events</a>
+                <a href="resource.html" class="nav-link text-md font-semibold text-black">Resources</a>
+
+                <button title="a"
+                    class="theme-btn p-2 rounded-full bg-slate-100 hover:bg-slate-200 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path class="icon-path" stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M3 12h2.25m.386-6.364l1.591 1.591M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="login.html" class="member-btn text-sm font-semibold text-black">Become a Member &rarr;</a>
+            </div>
+        </nav>
+
+        <el-dialog>
+            <dialog id="mobile-menu" class="lg:hidden">
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                    <el-dialog-panel
+                        class="fixed inset-y-0 right-0 z-50 w-70 overflow-y-auto bg-white p-6 shadow-2xl transition-all duration-500"
+                        id="mobile-panel">
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="-m-1.5 p-1.5">
+                                <img src="./images/ictclub.jpg" alt="Logo" class="w-12 rounded-full" />
+                            </a>
+                            <button type="button" command="close" commandfor="mobile-menu"
+                                class="-m-2.5 rounded-md p-2.5 text-black-700 close-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    class="size-8">
+                                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mt-6 flow-root">
+                            <div class="space-y-4 py-6">
+                                <a href="index.html"
+                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Home</a>
+                                <a href="index.html#member"
+                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Members</a>
+                                <a href="index.html#activities"
+                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Activities</a>
+                                <a href="events.html"
+                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Events</a>
+                                <a href="resource.html"
+                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Resources</a>
+
+                                <div class="py-6 border-t border-gray-100">
+                                    <a href="login.html"
+                                        class="member-btn -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-black">Become
+                                        a Member</a>
+                                </div>
+
+                                <button class="theme-btn p-2 rounded-full bg-slate-100 transition-all duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                        <path class="icon-path" stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M3 12h2.25m.386-6.364l1.591 1.591M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </el-dialog-panel>
+                </div>
+            </dialog>
+        </el-dialog>
+    </header>
+
+
+    <section class="py-10 px-5">
+        <div class="container mx-auto">
+            <h1 class="text-black text-4xl font-bold text-center mb-16 tracking-tight home-text">PDF Library</h1>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/c.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold mb-1 home-text">C Programming Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/C Handwritten Notes.pdf" download="">
+                            <div class="button"  data-tooltip="Size: 40Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/java.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold mb-1 home-text">Advance Java Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/Advanced Java Notes.pdf" download="">
+                            <div class="button" data-tooltip="Size: 43Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/java.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold mb-1 home-text">Java Programming Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/Complete Java Handwritten Notes .pdf" download="">
+                            <div class="button" data-tooltip="Size: 30Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/ml.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">Machine Learning Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/Complete Machine Learning Handwritten Notes.pdf" download="">
+                            <div class="button" data-tooltip="Size: 16Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/dbms.webp"
+                            alt="Python" class="w-30 h-24 rounded-full">
+                    </div>
+                    <h2 class="text-black text-xl font-bold mb-1 home-text">DBMS Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/DBMS Handwritten Notes.pdf" download="">
+                            <div class="button" data-tooltip="Size: 20Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/cpp.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">DSA Using C++ Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/DSA Handwritten Notes.pdf" download="">
+                            <div class="button" data-tooltip="Size: 20Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/python.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">DSA Using Python Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/DSA Using Python.pdf" download="">
+                            <div class="button" data-tooltip="Size: 17Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/js.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">Javascript Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/JavaScript Handwritten Notes.pdf" download="">
+                            <div class="button" data-tooltip="Size: 44Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/os.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">Operating System Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/Operating System Handwritten Notes.pdf" download="">
+                            <div class="button" data-tooltip="Size: 20Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/php.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">PHP Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/PHP Handwritten Notes.pdf" download="">
+                            <div class="button" data-tooltip="Size: 20Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/python.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">Python Deep Dive Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/Pytohn Final Deep Dive.pdf" download="">
+                            <div class="button" data-tooltip="Size: 8Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/cpp.webp"
+                            alt="C++" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">C++ Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/C++ Handwritten Notes.pdf" download="">
+                            <div class="button" data-tooltip="Size: 72Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/react.webp"
+                            alt="React JS" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">React JS Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/React.js Handwritten Notes.pdf" download="">
+                            <div class="button" data-tooltip="Size: 52Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/sql.svg"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">SQL Notes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Notes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="">
+                            <div class="button" data-tooltip="Size: 72Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Note</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- extra -->
+
+<section class="py-10 px-5">
+        <div class="container mx-auto">
+            <h1 class="text-black text-4xl font-bold text-center mb-16 tracking-tight  home-text">Extra Items</h1>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/color.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">Color Palettes</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Color Palettes Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/Color pallate.rar" download="">
+                            <div class="button"  data-tooltip="Size: 40Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Color Palettes</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/computer.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">Computer GK</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download GK Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/computer general knowledge.rar" download="">
+                            <div class="button" data-tooltip="Size: 43Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download GK</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div
+                    class=" border border-gray-800 p-8 rounded-xl flex flex-col items-center text-center hover:border-blue-500/50 transition-all duration-300 shadow-lg">
+                    <div class="w-32 h-32 mb-6 flex items-center justify-center bg-[#1e293b] rounded-full p-4">
+                        <img src="./images/excel.webp"
+                            alt="Python" class="w-20 h-20">
+                    </div>
+                    <h2 class="text-black text-xl font-bold home-text mb-1">Excel Formula</h2>
+                    <p class="text-black text-sm mb-6 home-text">Download Excel Formula Here</p>
+                    <div class="flex gap-2 w-full mt-auto">
+                        <a href="./notes/excel formula.rar" download="">
+                            <div class="button" data-tooltip="Size: 20Mb">
+                            <div class="button-wrapper">
+                                <div class="text home-text">Download Excel Formula</div>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                        height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>  
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
