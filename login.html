@@ -10,7 +10,7 @@
     <meta name="keywords"
         content="CPI ICT Club, Computer Polytechnic Institute, ICT Club Bangladesh, CPI Polytechnic ICT, CPI ICT">
     <meta name="author" content="Ayan">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="./images/ictclub.jpg" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
@@ -67,48 +67,53 @@
             <dialog id="mobile-menu" class="lg:hidden">
                 <div tabindex="0" class="fixed inset-0 focus:outline-none">
                     <el-dialog-panel
-                        class="fixed inset-y-0 right-0 z-50 w-70 overflow-y-auto bg-white p-6 shadow-2xl transition-all duration-500"
+                        class="fixed inset-y-0 right-0 z-50 w-72 overflow-y-auto bg-white p-6 shadow-2xl transition-all duration-500"
                         id="mobile-panel">
+
                         <div class="flex items-center justify-between">
                             <a href="#" class="-m-1.5 p-1.5">
                                 <img src="./images/ictclub.jpg" alt="Logo" class="w-12 rounded-full" />
                             </a>
                             <button type="button" command="close" commandfor="mobile-menu"
-                                class="-m-2.5 rounded-md p-2.5 text-black-700 close-btn">
+                                class="-m-2.5 rounded-md p-2.5 text-gray-700 close-btn">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
                                     class="size-8">
                                     <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
                         </div>
-                        <div class="mt-6 flow-root">
-                            <div class="space-y-4 py-6">
-                                <a href="index.html"
-                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Home</a>
-                                <a href="index.html#member"
-                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Members</a>
-                                <a href="index.html#activities"
-                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Activities</a>
-                                <a href="events.html"
-                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Events</a>
-                                <a href="resource.html"
-                                    class="nav-link -mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-black">Resources</a>
 
-                                <div class="py-6 border-t border-gray-100">
-                                    <a href="login.html"
-                                        class="member-btn -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-black">Become
-                                        a Member</a>
-                                </div>
-
-                                <button class="theme-btn p-2 rounded-full bg-slate-100 transition-all duration-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                                        <path class="icon-path" stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M3 12h2.25m.386-6.364l1.591 1.591M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-                                    </svg>
-                                </button>
-                            </div>
+                        <div class="mt-6 flex flex-col space-y-1">
+                            <a href="index.html"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Home</a>
+                            <a href="index.html#member"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Members</a>
+                            <a href="index.html#activities"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Activities</a>
+                            <a href="events.html"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Events</a>
+                            <a href="resource.html"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Resources</a>
                         </div>
+
+                        <div class="mt-6 pt-6 border-t border-gray-100">
+                            <a href="login.html"
+                                class="member-btn block w-full text-center rounded-full px-6 py-3 text-base font-semibold text-black bg-gray-100 hover:bg-gray-200 transition-colors">
+                                Become a Member
+                            </a>
+                        </div>
+
+                        <!-- Theme toggle -->
+                        <div class="mt-4">
+                            <button class="theme-btn p-2 rounded-full bg-slate-100 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path class="icon-path" stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M3 12h2.25m.386-6.364l1.591 1.591M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                                </svg>
+                            </button>
+                        </div>
+
                     </el-dialog-panel>
                 </div>
             </dialog>
@@ -121,108 +126,114 @@
 
 
     <form id="membershipForm" class="px-5 max-w-md mx-auto" action="https://formspree.io/f/mqegvlll" method="post">
-        <h1 class="flex justify-center my-10 w-full text-2xl font-bold text-blue-600 tracking-widest">ICT CLUB
+        <h1 class="flex justify-center my-10 w-full home-text text-2xl font-bold text-blue-600 tracking-widest">ICT CLUB
             Membership Form</h1>
         <div class="relative z-0 w-full mb-5 group">
-            <input type="name" name="fullname" id="fullname"
-                class="home-text block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+            <input type="name" name="floating_fullname" id="floating_fullname"
+                class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
-            <label for="fullname"
-                class="home-text absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Full
+            <label for="floating_fullname"
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Full
                 Name</label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="address" name="address" id="address"
-                class="home-text block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+            <input type="address" name="floating_address" id="floating_address"
+                class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
-            <label for="address"
-                class="home-text absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Present
+            <label for="floating_address"
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Present
                 Address</label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="teachnology" name="teachnology" id="teachnology"
-                class="home-text block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+            <input type="teachnology" name="floating_teachnology" id="floating_teachnology"
+                class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
-            <label for="teachnology"
-                class="home-text absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Technology
+            <label for="floating_teachnology"
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Technology
             </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="roll" name="roll" id="roll"
-                class="home-text block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+            <input type="roll" name="floating_roll" id="floating_roll"
+                class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
-            <label for="roll"
-                class="home-text absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Admission
+            <label for="floating_roll"
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Admission
                 Roll
             </label>
         </div>
         <div class="relative z-0 w-full mb-5 group">
-            <input type="Semester" name="Semester" id="Semester"
-                class="home-text block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+            <input type="Semester" name="floating_Semester" id="floating_Semester"
+                class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
-            <label for="Semester"
-                class="home-text absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Semester
+            <label for="floating_Semester"
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Semester
             </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="blood" name="blood" id="blood"
-                class="home-text block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
-                placeholder="" required />
-            <label for="blood"
-                class="home-text absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Blood
+            <input type="blood" name="floating_blood" id="floating_blood"
+                class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+                placeholder=" " required />
+            <label for="floating_blood"
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Blood
                 Group
             </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="phone" name="number" id="number"
-                class="home-text block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+            <input type="phone" name="floating_number" id="floating_number"
+                class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
-            <label for="number"
-                class="home-text absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Phone
+            <label for="floating_number"
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Phone
                 Number
             </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="e-mail" name="email" id="email"
-                class="home-text block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+            <input type="e-mail" name="floating_email" id="floating_email"
+                class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
-            <label for="email"
-                class="home-text absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email
+            <label for="floating_email"
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email
             </label>
         </div>
 
         <fieldset>
-            <legend class="sr-only home-text ">Do you have?</legend>
+            <legend class="sr-only">Do you have?</legend>
 
             <div class="flex items-center mb-4">
                 <input id="country-option-1" type="radio" name="countries" value="USA"
-                    class="home-text w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none"
+                    class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none"
                     checked>
-                <label for="country-option-1" class="home-text select-none ms-2 text-sm font-medium text-heading">
+                <label for="country-option-1" class="select-none ms-2 text-sm font-medium text-heading">
                     Desktop
                 </label>
             </div>
 
             <div class="flex items-center mb-4">
                 <input id="country-option-2" type="radio" name="countries" value="Germany"
-                    class="home-text w-4 h-4 text-black border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
-                <label for="country-option-2" class="home-text select-none ms-2 text-sm font-medium text-heading">
+                    class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+                <label for="country-option-2" class="select-none ms-2 text-sm font-medium text-heading">
                     Laptop
                 </label>
             </div>
 
         </fieldset>
 
+
+
         <button type="submit"
             class="btn-12 mt-5 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300""><span>Button</span></button>
 
     </form>
+
+
+
+
 
     <script src=" ../path/to/flowbite/dist/flowbite.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
