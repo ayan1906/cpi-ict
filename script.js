@@ -200,6 +200,6 @@ if (membershipForm) {
         alert(`Thank you, ${name}! Your membership form has been submitted successfully.`);
         membershipForm.reset();
 
-        window.location.href = ' .html';
+        window.location.href = ' members.html';
     });
 }
