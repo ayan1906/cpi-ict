@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICT Club - Member Directory</title>
+    <meta name="description"
+        content="Welcome to the CPI ICT Club official website. We provide resources, membership, and technology training for students of CPI.">
+    <meta name="keywords"
+        content="CPI ICT Club, Computer Polytechnic Institute, ICT Club Bangladesh, CPI Polytechnic ICT, CPI ICT">
+    <meta name="author" content="Ayan">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <link rel="shortcut icon"
+    href="https://scontent.fdac198-1.fna.fbcdn.net/v/t39.30808-1/438222663_400583079485916_5109593548579227615_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFDmbmgCp6u8VbleAV26IEvIBddHiw3oosgF10eLDeiiwmgvzAN30wS0dSJ22mdzceVUKXY87HskHYSWdetnmjS&_nc_ohc=mEGwAVlfmNAQ7kNvwGXrQgP&_nc_oc=AdmVQ1dFKhFsQqiHOFMU-bkSDXtpRFZPnGNY1ZSBFg1f8qwg3yCJFtypRrXVwyLLrvU&_nc_zt=24&_nc_ht=scontent.fdac198-1.fna&_nc_gid=S1nqLuz0V9tNb5HE3oTkCw&oh=00_AfezSCYV6lFRMUutGopir9MhoMVMTbcKRXaJkZmX0TtwFg&oe=68F97799"
+    type="image/x-icon" />  
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style type="text/tailwindcss">
@@ -17,7 +25,7 @@
 
 <body id="main-body" class="bg-white transition-colors duration-500">
 
-    <!-- NAV (unchanged) -->
+    <!-- NAV -->
     <header>
         <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-5 lg:px-8">
             <div class="flex lg:flex-1">
@@ -38,13 +46,13 @@
             </div>
 
             <div class="hidden lg:flex lg:gap-x-12 items-center">
-                <a href="#home" class="nav-link text-md font-semibold text-black">Home</a>
+                <a href="index.html" class="nav-link text-md font-semibold text-black">Home</a>
                 <a href="#member" class="nav-link text-md font-semibold text-black">Members</a>
-                <a href="#activities" class="nav-link text-md font-semibold text-black">Activities</a>
+                <a href="index.html#activities" class="nav-link text-md font-semibold text-black">Activities</a>
                 <a href="events.html" class="nav-link text-md font-semibold text-black">Events</a>
                 <a href="resource.html" class="nav-link text-md font-semibold text-black">Resources</a>
 
-                <button title="a"
+                <button title="Toggle Theme"
                     class="theme-btn p-2 rounded-full bg-slate-100 hover:bg-slate-200 transition-all duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-6 h-6">
@@ -60,62 +68,61 @@
         </nav>
 
         <el-dialog>
-            <el-dialog>
-                <dialog id="mobile-menu" class="lg:hidden">
-                    <div tabindex="0" class="fixed inset-0 focus:outline-none">
-                        <el-dialog-panel
-                            class="fixed inset-y-0 right-0 z-50 w-72 overflow-y-auto bg-white p-6 shadow-2xl transition-all duration-500"
-                            id="mobile-panel">
+            <dialog id="mobile-menu" class="lg:hidden">
+                <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                    <el-dialog-panel
+                        class="fixed inset-y-0 right-0 z-50 w-72 overflow-y-auto bg-white p-6 shadow-2xl transition-all duration-500"
+                        id="mobile-panel">
 
-                            <div class="flex items-center justify-between">
-                                <a href="#" class="-m-1.5 p-1.5">
-                                    <img src="./images/ictclub.jpg" alt="Logo" class="w-12 rounded-full" />
-                                </a>
-                                <button type="button" command="close" commandfor="mobile-menu"
-                                    class="-m-2.5 rounded-md p-2.5 text-gray-700 close-btn">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                        class="size-8">
-                                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                            </div>
+                        <div class="flex items-center justify-between">
+                            <a href="#" class="-m-1.5 p-1.5">
+                                <img src="./images/ictclub.jpg" alt="Logo" class="w-12 rounded-full" />
+                            </a>
+                            <button type="button" command="close" commandfor="mobile-menu"
+                                class="-m-2.5 rounded-md p-2.5 text-gray-700 close-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    class="size-8">
+                                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
 
-                            <div class="mt-6 flex flex-col space-y-1">
-                                <a href="#home"
-                                    class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Home</a>
-                                <a href="#member"
-                                    class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Members</a>
-                                <a href="#activities"
-                                    class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Activities</a>
-                                <a href="events.html"
-                                    class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Events</a>
-                                <a href="resource.html"
-                                    class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Resources</a>
-                            </div>
+                        <div class="mt-6 flex flex-col space-y-1">
+                            <a href="index.html"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Home</a>
+                            <a href="#member"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Members</a>
+                            <a href="index.html#activities"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Activities</a>
+                            <a href="events.html"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Events</a>
+                            <a href="resource.html"
+                                class="nav-link block rounded-lg px-3 py-2 text-base font-semibold text-black hover:bg-gray-50">Resources</a>
+                        </div>
 
-                            <div class="mt-6 pt-6 border-t border-gray-100">
-                                <a href="login.html"
-                                    class="member-btn block w-full text-center rounded-full px-6 py-3 text-base font-semibold text-black bg-gray-100 hover:bg-gray-200 transition-colors">
-                                    Become a Member
-                                </a>
-                            </div>
+                        <div class="mt-6 pt-6 border-t border-gray-100">
+                            <a href="login.html"
+                                class="member-btn block w-full text-center rounded-full px-6 py-3 text-base font-semibold text-black bg-gray-100 hover:bg-gray-200 transition-colors">
+                                Become a Member
+                            </a>
+                        </div>
 
-                            <div class="mt-4">
-                                <button class="theme-btn p-2 rounded-full bg-slate-100 transition-all duration-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                                        <path class="icon-path" stroke-linecap="round" stroke-linejoin="round"
-                                            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M3 12h2.25m.386-6.364l1.591 1.591M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-                                    </svg>
-                                </button>
-                            </div>
+                        <div class="mt-4">
+                            <button class="theme-btn p-2 rounded-full bg-slate-100 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                    <path class="icon-path" stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M3 12h2.25m.386-6.364l1.591 1.591M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                                </svg>
+                            </button>
+                        </div>
 
-                        </el-dialog-panel>
-                    </div>
-                </dialog>
-            </el-dialog>
+                    </el-dialog-panel>
+                </div>
+            </dialog>
+        </el-dialog>
     </header>
-   
+
     <section id="member" class="py-12 bg-gradient-to-b from-blue-50/40 to-white transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -142,7 +149,7 @@
                 <div
                     class="px-6 py-4 border-b border-gray-100 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
                     <h3 class="text-sm font-700 text-gray-700">All Members</h3>
-                    
+                    <!-- Optional: search input -->
                 </div>
 
                 <div class="overflow-x-auto">
@@ -151,15 +158,11 @@
                             <tr class="bg-gray-50 border-b border-gray-100">
                                 <th class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500">#</th>
                                 <th class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500">Name</th>
-                                <th class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500">
-                                    Designation</th>
+                                <th class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500">Designation</th>
                                 <th class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500">Email</th>
                                 <th class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500">Phone</th>
-                                <th class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500">Address
-                                </th>
-                                <th
-                                    class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500 text-center">
-                                    Status</th>
+                                <th class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500">Address</th>
+                                <th class="py-4 px-6 text-xs font-700 uppercase tracking-wider text-gray-500 text-center">Status</th>
                             </tr>
                         </thead>
                         <tbody id="memberTableBody" class="divide-y divide-gray-50">
