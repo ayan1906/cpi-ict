@@ -17,9 +17,13 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="shortcut icon"
         href="https://scontent.fdac198-1.fna.fbcdn.net/v/t39.30808-1/438222663_400583079485916_5109593548579227615_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFDmbmgCp6u8VbleAV26IEvIBddHiw3oosgF10eLDeiiwmgvzAN30wS0dSJ22mdzceVUKXY87HskHYSWdetnmjS&_nc_ohc=mEGwAVlfmNAQ7kNvwGXrQgP&_nc_oc=AdmVQ1dFKhFsQqiHOFMU-bkSDXtpRFZPnGNY1ZSBFg1f8qwg3yCJFtypRrXVwyLLrvU&_nc_zt=24&_nc_ht=scontent.fdac198-1.fna&_nc_gid=S1nqLuz0V9tNb5HE3oTkCw&oh=00_AfezSCYV6lFRMUutGopir9MhoMVMTbcKRXaJkZmX0TtwFg&oe=68F97799"
-        type="image/x-icon">
+        type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style type="text/tailwindcss">
+        body { font-family: 'Outfit', sans-serif; }
+    </style>
 </head>
-
 
 <body id="main-body" class="bg-white transition-colors duration-500">
     <header>
@@ -48,7 +52,7 @@
                 <a href="events.html" class="nav-link text-md font-semibold text-black">Events</a>
                 <a href="resource.html" class="nav-link text-md font-semibold text-black">Resources</a>
 
-                <button title="a"
+                <button title="Toggle Theme"
                     class="theme-btn p-2 rounded-full bg-slate-100 hover:bg-slate-200 transition-all duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                         stroke="currentColor" class="w-6 h-6">
@@ -120,93 +124,98 @@
         </el-dialog>
     </header>
 
+    <!-- Membership Form -->
+    <h1 class="flex justify-center my-10 w-full home-text text-2xl font-bold text-blue-600 tracking-widest">
+        ICT CLUB Membership Form
+    </h1>
 
-    <!-- form -->
+    <form id="membershipForm" class="px-5  max-w-md mx-auto">
 
-
-
-    <form id="membershipForm" class=" px-5 max-w-md mx-auto" action="https://formspree.io/f/mqegvlll" method="post">
-        <h1 class="flex justify-center my-10 w-full home-text text-2xl font-bold text-blue-600 tracking-widest">ICT CLUB
-            Membership Form</h1>
         <div class="relative z-0 w-full mb-5 group">
-            <input type="name" name="floating_fullname" id="floating_fullname"
+            <input type="text" name="floating_fullname" id="floating_fullname"
                 class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
             <label for="floating_fullname"
-                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Full
-                Name</label>
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Full Name
+            </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="address" name="floating_address" id="floating_address"
+            <input type="text" name="floating_address" id="floating_address"
                 class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
             <label for="floating_address"
-                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Present
-                Address</label>
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Present Address
+            </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="teachnology" name="floating_teachnology" id="floating_teachnology"
+            <input type="text" name="floating_teachnology" id="floating_teachnology"
                 class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
             <label for="floating_teachnology"
-                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Technology
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Technology
             </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="roll" name="floating_roll" id="floating_roll"
+            <input type="text" name="floating_roll" id="floating_roll"
                 class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
             <label for="floating_roll"
-                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Admission
-                Roll
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Admission Roll
             </label>
         </div>
+
         <div class="relative z-0 w-full mb-5 group">
-            <input type="Semester" name="floating_Semester" id="floating_Semester"
+            <input type="text" name="floating_Semester" id="floating_Semester"
                 class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
             <label for="floating_Semester"
-                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Semester
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Semester
             </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="blood" name="floating_blood" id="floating_blood"
+            <input type="text" name="floating_blood" id="floating_blood"
                 class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
             <label for="floating_blood"
-                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Blood
-                Group
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Blood Group
             </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="phone" name="floating_number" id="floating_number"
+            <input type="tel" name="floating_number" id="floating_number"
                 class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
             <label for="floating_number"
-                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Phone
-                Number
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Phone Number
             </label>
         </div>
 
         <div class="relative z-0 w-full mb-5 group">
-            <input type="e-mail" name="floating_email" id="floating_email"
+            <input type="email" name="floating_email" id="floating_email"
                 class="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
                 placeholder=" " required />
             <label for="floating_email"
-                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email
+                class="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Email
             </label>
         </div>
 
         <fieldset>
-            <legend class="sr-only">Do you have?</legend>
+            <legend class="text-sm text-body mb-3">Do you have?</legend>
 
             <div class="flex items-center mb-4">
-                <input id="country-option-1" type="radio" name="countries" value="USA"
+                <input id="country-option-1" type="radio" name="countries" value="Desktop"
                     class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none"
                     checked>
                 <label for="country-option-1" class="select-none ms-2 text-sm font-medium text-heading">
@@ -215,29 +224,25 @@
             </div>
 
             <div class="flex items-center mb-4">
-                <input id="country-option-2" type="radio" name="countries" value="Germany"
-                    class=" w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+                <input id="country-option-2" type="radio" name="countries" value="Laptop"
+                    class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
                 <label for="country-option-2" class="select-none ms-2 text-sm font-medium text-heading">
                     Laptop
                 </label>
             </div>
-
         </fieldset>
 
 
 
-        <button type="submit"
-            class="btn-12 mt-5 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300""><span>Button</span></button>
+        <button class="button type1" type="submit">
+            <span class="btn-txt">Submit</span>
+        </button>
+
 
     </form>
 
-
-
-
-
-    <script src=" ../path/to/flowbite/dist/flowbite.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
-            <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
