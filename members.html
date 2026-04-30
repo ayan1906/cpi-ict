@@ -192,7 +192,31 @@
     </section>
 
     <script src="script.js"></script>
+ <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
+<script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+        webhookUrl: 'https://rimi12.app.n8n.cloud/webhook/cd96facc-4a02-437d-94cb-5b56ff8bb0f2/chat',
+        mode: 'embedded',
+        chatInputPlaceholder: 'Enter Your Question Here...',
+        title: 'Hello! 👋',
+        subtitle: 'How can I help you today?',
+        showWelcomeScreen: true,
+        defaultLanguage: 'en', // এখানে 'en' থাকলেও আপনি বাংলা টেক্সট ব্যবহার করতে পারবেন
+        initialMessages: [
+            "Welcome! I a'm the AI Assistant of CPI ICT CLUB."
+        ],
+        i18n: {
+            en: {
+                title: 'Online elp',
+                subtitle: 'I am active here 24/7',
+                placeholder: 'Type here...',
+            }
+        }
+    });
+</script>
 </body>
 
 </html>
